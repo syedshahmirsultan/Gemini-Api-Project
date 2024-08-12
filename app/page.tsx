@@ -5,7 +5,7 @@ import Hero from './Components/Hero';
 
 const Home = () => {
   return (
-    <div>
+    <div className='mb-20'>
       <Hero/>
       <GeminiDemo/>
     </div>
