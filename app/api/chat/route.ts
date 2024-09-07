@@ -3,8 +3,6 @@ import { GoogleGenerativeAIStream, Message, StreamingTextResponse } from 'ai';
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
 
-// convert messages from the Vercel AI SDK Format to the format
-// that is expected by the Google GenAI SDK
 const buildGoogleGenAIPrompt = (messages: Message[]) => ({
   contents: messages
     .filter(message => message.role === 'user' || message.role === 'assistant')
